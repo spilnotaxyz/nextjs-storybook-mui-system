@@ -1,0 +1,43 @@
+name: Release
+run-name: ${{ github.actor }} is releasing a new version 🚀
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🧲
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          token: ${{ secrets.SEMANTIC_RELEASE_PAT }}
+      - name: Install dependencies 📦
+        run: yarn install
+      - name: Lint 🧹
+        run: yarn lint
+  release:
+    name: Release
+    needs: lint
+    if: github.event.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🧲
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          token: ${{ secrets.SEMANTIC_RELEASE_PAT }}
+      - name: Install dependencies 📦
+        run: yarn install
+      - name: Release 🪄🎁
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: yarn semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_PAT }}
