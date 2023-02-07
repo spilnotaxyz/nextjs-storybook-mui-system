@@ -1,0 +1,56 @@
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url("/fonts/neue-machina/NeueMachina-Ultralight.woff2");
+  format: ("woff2");
+  font-display: swap;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url("/fonts/neue-machina/NeueMachina-Light.woff2");
+  format: ("woff2");
+  font-display: swap;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url("/fonts/neue-machina/NeueMachina-Regular.woff2");
+  format: ("woff2");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url("/fonts/neue-machina/NeueMachina-Medium.woff2");
+  format: ("woff2");
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url("/fonts/neue-machina/NeueMachina-Bold.woff2");
+  format: ("woff2");
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url("/fonts/neue-machina/NeueMachina-UltraBold.woff2");
+  format: ("woff2");
+  font-display: swap;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url("/fonts/neue-machina/NeueMachina-Black.woff2");
+  format: ("woff2");
+  font-display: swap;
+  font-weight: 900;
+}
