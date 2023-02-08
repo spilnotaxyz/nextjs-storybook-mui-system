@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from "@mui/system"
-import { theme } from "../src/lib"
+import { theme } from "../lib"
 
 export const withMuiTheme = (Story) =>  (
   <ThemeProvider theme={theme}>
