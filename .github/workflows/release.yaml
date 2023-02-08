@@ -11,6 +11,7 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
+    if: github.actor != 'semantic-release-bot'
     steps:
       - name: Checkout 🧲
         uses: actions/checkout@v2
